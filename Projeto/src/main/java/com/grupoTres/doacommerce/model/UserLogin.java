@@ -2,7 +2,7 @@ package com.grupoTres.doacommerce.model;
 
 public class UserLogin {
 
-		private String nome_razao;
+		private String nomeRazao;
 		
 		private String email;
 		
@@ -11,11 +11,11 @@ public class UserLogin {
 		private String token;
 
 		public String getNome() {
-			return nome_razao;
+			return nomeRazao;
 		}
 
-		public void setNome(String nome_razao) {
-			this.nome_razao = nome_razao;
+		public void setNome(String nomeRazao) {
+			this.nomeRazao = nomeRazao;
 		}
 
 		public String getEmail() {

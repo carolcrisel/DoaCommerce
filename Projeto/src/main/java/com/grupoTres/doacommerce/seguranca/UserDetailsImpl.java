@@ -16,9 +16,9 @@ import com.grupoTres.doacommerce.model.Usuario;
 		private List<GrantedAuthority> authorities;
 		
 		
-		public UserDetailsImpl(Usuario userFisica) {
-			this.username = userFisica.getEmail();
-			this.password = userFisica.getSenha();
+		public UserDetailsImpl(Usuario usuario) {
+			this.username = usuario.getEmail();
+			this.password = usuario.getSenha();
 		}
 		
 		public UserDetailsImpl() {}

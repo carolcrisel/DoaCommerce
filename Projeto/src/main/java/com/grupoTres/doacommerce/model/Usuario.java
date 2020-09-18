@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -36,7 +35,7 @@ public class Usuario {
 	private String senha;
 
 	@NotNull
-	private long cpf_cnpj;
+	private long cpfCnpj;
 
 	@NotNull
 	private Date idade;
@@ -45,7 +44,7 @@ public class Usuario {
 	private String endereco;
 
 	@NotNull
-	private int tipo_pessoa;
+	private int tipoPessoa;
 
 	// cod anterior -> @NotNull
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
@@ -88,12 +87,12 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public long getCpf_cnpj() {
-		return cpf_cnpj;
+	public long getCpfCnpj() {
+		return cpfCnpj;
 	}
 
-	public void setCpf_cnpj(long cpf_cnpj) {
-		this.cpf_cnpj = cpf_cnpj;
+	public void setCpfCnpj(long cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
 	}
 
 	public Date getIdade() {
@@ -112,12 +111,12 @@ public class Usuario {
 		this.endereco = endereco;
 	}
 
-	public int getTipo_pessoa() {
-		return tipo_pessoa;
+	public int getTipoPessoa() {
+		return tipoPessoa;
 	}
 
-	public void setTipo_pessoa(int tipo_pessoa) {
-		this.tipo_pessoa = tipo_pessoa;
+	public void setTipoPessoa(int tipoPessoa) {
+		this.tipoPessoa = tipoPessoa;
 	}
 
 	public List<Produto> getProduto() {
@@ -136,4 +135,5 @@ public class Usuario {
 		this.produtoDoacao = produtoDoacao;
 	}
 
+	
 }
